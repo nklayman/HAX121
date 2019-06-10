@@ -9,6 +9,7 @@ const models = {
 };
 
 models.Student.associate(models);
+models.Team.associate(models);
 
 module.exports = {
   pg: db,

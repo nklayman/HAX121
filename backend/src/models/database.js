@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 
-const seq = new Sequelize('weee', process.env.POSTGRES_USERNAME, process.env.POSTGRES_PASSWORD, {
+const seq = new Sequelize('hax121', process.env.POSTGRES_USERNAME, process.env.POSTGRES_PASSWORD, {
   host: process.env.POSTGRES_URL,
   dialect: 'postgres',
   port: process.env.POSTGRES_PORT,
