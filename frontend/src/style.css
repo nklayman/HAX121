@@ -1,0 +1,45 @@
+  nav {
+    margin: 5px;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0px;
+    overflow: hidden;
+  }
+  
+  nav.float-right {
+    float: right;
+  }
+
+  .signUpButton{
+    width: 90px;
+    height: 30px;
+    background-color: #00635d;
+    border-radius: 10px;
+    display: table;
+    margin: 0px auto 0px auto;
+    padding:5px;
+    margin-top: 7px;
+  }
+  
+  nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  nav.float-left {
+    float: left;
+  }
+
+  nav li img.logo {
+      width: 45px;
+      border-radius: 10px;
+      margin-left: 10px;
+  }
+  
+  nav li a:hover {
+    color: lightgray;
+  }
