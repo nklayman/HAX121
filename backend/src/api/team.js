@@ -8,7 +8,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
   db.Team.findAll({
     where: req.postgres.where,
-    attributes: req.postgres.attributes ? req.postgres.attributes : db.Order.getAttributes(),
+    attributes: req.postgres.attributes ? req.postgres.attributes : db.Team.getAttributes(),
     include: req.postgres.include ? req.postgres.include : [],
   })
     .then((resObjs) => {
@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   db.Team.findOne({
     where: { id: req.params.id },
-    attributes: req.postgres.attributes ? req.postgres.attributes : db.Order.getAttributes(),
+    attributes: req.postgres.attributes ? req.postgres.attributes : db.Team.getAttributes(),
     include: req.postgres.include ? req.postgres.include : [],
   })
     .then((resObj) => {

@@ -8,7 +8,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
   db.Student.findAll({
     where: req.postgres.where,
-    attributes: req.postgres.attributes ? req.postgres.attributes : db.Order.getAttributes(),
+    attributes: req.postgres.attributes ? req.postgres.attributes : db.Student.getAttributes(),
     include: req.postgres.include ? req.postgres.include : [],
   })
     .then((resObjs) => {
@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   db.Student.findOne({
     where: { id: req.params.id },
-    attributes: req.postgres.attributes ? req.postgres.attributes : db.Order.getAttributes(),
+    attributes: req.postgres.attributes ? req.postgres.attributes : db.Student.getAttributes(),
     include: req.postgres.include ? req.postgres.include : [],
   })
     .then((resObj) => {
@@ -44,8 +44,6 @@ router.post('/', (req, res) => {
     })
     .catch(err => res.status(400).send(err));
 });
-
-// router.post('/', (req, res) => {});
 
 // router.patch('/:id', (req, res) => {});
 
