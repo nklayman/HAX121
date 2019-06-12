@@ -45,7 +45,20 @@ router.post('/', (req, res) => {
     .catch(err => res.status(400).send(err));
 });
 
-// router.patch('/:id', (req, res) => {});
+router.patch('/:id', (req, res) => {
+  db.Student.findOne({
+    where: { id: req.params.id },
+  })
+    .then((resObj) => {
+      if (resObj) {
+        resObj
+          .update(req.body)
+          .then(() => res.send({ message: 'Success' }))
+          .catch(err => res.status(400).send(err));
+      } else res.send({});
+    })
+    .catch(err => res.status(400).send(err));
+});
 
 // router.delete('/:id', (req, res) => {});
 
