@@ -34,6 +34,17 @@ router.get('/:id', (req, res) => {
     .catch(err => res.status(400).send(err));
 });
 
+router.post('/', (req, res) => {
+  db.Student.create(req.body)
+    .then((resObj) => {
+      if (resObj) {
+        const r = resObj.get({ plain: true });
+        res.send(r);
+      } else res.send({});
+    })
+    .catch(err => res.status(400).send(err));
+});
+
 // router.post('/', (req, res) => {});
 
 // router.patch('/:id', (req, res) => {});
