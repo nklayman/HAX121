@@ -117,6 +117,8 @@ module.exports.processQuery = (req, res, next) => {
             newIncludeObj.model = db.Student;
           } else if (cur.indexOf('team') !== -1) {
             newIncludeObj.model = db.Team;
+          } else if (cur.indexOf('emergency_contact') !== -1) {
+            newIncludeObj.model = db.EmergencyContact;
           }
 
           acc.include.push(newIncludeObj);

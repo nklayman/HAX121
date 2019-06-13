@@ -21,5 +21,6 @@ app.get('/', (req, res) => res.send('This is the backend for HAX121. Please use 
 // app.use('/api/auth', APIRouters.AuthRouter);
 app.use('/api/students', APIRouters.StudentRouter);
 app.use('/api/teams', APIRouters.TeamRouter);
+app.use('/api/emergencycontacts', APIRouters.EmergencyContactRouter);
 
 app.listen(9121, () => {});
