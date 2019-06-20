@@ -1,7 +1,16 @@
-<<<<<<< HEAD
+html {
+  margin: 0px;
+  margin-top: -30px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+}
+
 body{
-	margin: 0;
-	padding: 0;
+	margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
 }
 
 .home {
@@ -12,7 +21,6 @@ body{
 }
 .signup {
 }
-=======
   nav {
     margin: 5px;
   }
@@ -60,4 +68,20 @@ body{
   nav li a:hover {
     color: lightgray;
   }
->>>>>>> origin/master
+
+  .background {
+    background-image: url('img/homeBkgrd.png'); 
+    background-position:center;
+    background-repeat:no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 1250px;
+  }
+
+  .landing {
+    margin: 0 auto;
+    padding: 0 5%;
+    clear: both;
+    }
