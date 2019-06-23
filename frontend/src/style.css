@@ -1,91 +1,77 @@
 html {
-  margin: 0px;
-  margin-top: 0px;
-  padding: 0px;
-  height: 100%;
-  width: 100%;
+   margin: 0px;
+   margin-top: 0px;
+   padding: 0px;
+   height: 100%;
+   width: 100%;
 }
-
-body{
-  margin: 0px;
-  margin-top: -20px;
-  padding: 0px;
-  height: 100%;
-  width: 100%;
+body {
+   margin: 0px;
+   margin-top: -20px;
+   padding: 0px;
+   height: 100%;
+   width: 100%;
 }
-
-.home {
+.home {}
+.about {}
+.contact {}
+.signup {}
+nav {
+   margin: 10px;
+   padding-top: 30px;
+   width: 100%;
 }
-.about {
+ul {
+   list-style-type: none;
+   padding: 0px;
+   overflow: hidden;
+   float: right;
 }
-.contact {
+nav li {
+   vertical-align: top;
+   float: right;
 }
-.signup {
+.signUpButton {
+   width: 90px;
+   height: 30px;
+   background-color: #00635d;
+   border-radius: 10px;
+   display: table;
+   margin: 0px auto 0px auto;
+   padding: 5px;
+   margin-top: 7px;
 }
-  nav {
-    margin: 10px;
-    padding-top: 30px;
-    width: 100%;
-  }
-  nav ul {
-    list-style-type: none;
-    padding: 0px;
-    overflow: hidden;
-  }
-
-  nav li{
-    vertical-align: top;
-    float: right;    
-  }
-
-
-  .signUpButton{
-    width: 90px;
-    height: 30px;
-    background-color: #00635d;
-    border-radius: 10px;
-    display: table;
-    margin: 0px auto 0px auto;
-    padding:5px;
-    margin-top: 7px;
-  }
-  
-  nav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-
-  nav.float-left {
-    float: left;
-  }
-
-  nav li img.logo {
-      width: 45px;
-      border-radius: 10px;
-      margin-left: 10px;
-  }
-  
-  nav li a:hover {
-    color: lightgray;
-  }
-
-  .background {
-    background-image: url('img/homeBkgrd.png'); 
-    background-position:center;
-    background-repeat:no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 1250px;
-    margin-top: -35px;
-  }
-
-  .landing {
-    margin: 0 auto;
-    padding: 0 5%;
-    clear: both;
-    }
+nav li a {
+   display: block;
+   color: white;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+}
+nav.float-left {
+   float: left;
+}
+nav li img.logo {
+   width: 45px;
+   border-radius: 10px;
+   margin-left: 10px;
+}
+nav li a:hover {
+   color: lightgray;
+}
+.background {
+   background-image: url('img/homeBkgrd.png');
+   background-position: center;
+   background-repeat: no-repeat;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   height: 1250px;
+   margin-top: -35px;
+}
+.landing {
+   margin: 0 auto;
+   padding: 0 5%;
+   clear: both;
+}
