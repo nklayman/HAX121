@@ -12,6 +12,16 @@ body{
   padding: 0px;
   height: 100%;
   width: 100%;
+  color: #ffffff;
+}
+
+p {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
 }
 
 .home {
@@ -31,6 +41,7 @@ body{
     list-style-type: none;
     padding: 0px;
     overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
   }
 
   nav li{
@@ -42,10 +53,13 @@ body{
   .signUpButton{
     width: 90px;
     height: 30px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
     background-color: #00635d;
-    border-radius: 10px;
+    border-radius: 20px;
     display: table;
     margin: 0px auto 0px auto;
+    margin-left: 0px;
     padding:5px;
     margin-top: 7px;
   }
@@ -89,3 +103,28 @@ body{
     padding: 0 5%;
     clear: both;
     }
+
+  .Text{
+    width: 350px;
+    margin: 170px 70px;
+    color: #ddd3d3;
+
+    }
+  .Text hr {
+    width: 70%;
+    color: #ffffff;
+    text-align: left;
+    padding: -5px;
+  }
+
+  .Text a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  #HaxInfo {
+    margin: 235px 40px;
+    width: 320px;
+  }
+  
