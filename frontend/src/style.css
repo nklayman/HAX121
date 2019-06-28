@@ -1,0 +1,148 @@
+html, body {
+   margin: 0px;
+   margin-top: 0px;
+   padding: 0px;
+   height: 100%;
+   width: 100%;
+   overflow-x: hidden; 
+}
+
+body{
+  color: #ffffff;
+}
+
+p {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 100px;
+}
+.home {}
+.about {}
+.contact {}
+.signup {}
+nav {
+   margin: 10px;
+   padding-top: 30px;
+   width: 100%;
+}
+ul {
+   list-style-type: none;
+   padding: 0px;
+   overflow: hidden;
+}
+nav li {
+   vertical-align: top;
+   float: right;
+}
+  nav ul {
+    list-style-type: none;
+    padding: 0px;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+  }
+  nav img {
+    margin: 7px;
+    width: 45px;
+  }
+
+  nav .right {
+    float: right;
+  }
+
+  .signUpButton{
+    width: 100px;
+    height: 40px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    border: 5px #00635d solid;
+    background-color: #00635d;
+    border-radius: 15px;
+    display: table;
+    margin: 0px auto 0px auto;
+    margin-left: 0px;
+    padding:5px;
+    margin-top: 7px;
+  }
+  
+  nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  nav .float-left {
+    float: left;
+  }
+
+  nav img .logo {
+      width: 45px;
+      border-radius: 10px;
+      margin-left: 10px;
+  }
+  
+  nav a:hover {
+    color: lightgray;
+  }
+
+  .background {
+    background-image: url('img/homeBkgrd.png'); 
+    background-position:center;
+    background-repeat:no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 1250px;
+    margin-top: -35px;
+  }
+
+  .landing {
+    margin: 0 auto;
+    padding: 0 5%;
+    clear: both;
+    }
+
+  .Text{
+    width: 350px;
+    margin: 170px 70px;
+    color: #ddd3d3;
+
+    }
+  .Text hr {
+    color: #ffffff;
+    text-align: left;
+    padding: -5px;
+  }
+
+  .Text a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  #HaxInfo {
+    margin: 235px 40px;
+    width: 320px;
+  }
+  
+.background {
+   background-image: url('img/homeBkgrd.png');
+   background-position: center;
+   background-repeat: no-repeat;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   margin-top: -35px;
+}
+.landing {
+   margin: 0 auto;
+   padding: 0 5%;
+   clear: both;
+}
