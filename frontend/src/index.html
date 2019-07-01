@@ -2,9 +2,6 @@
   <head>
     <meta charset="UTF-8" />
     <title>Hax121</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <!--Font imports-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:600&display=swap" rel="stylesheet" />
   </head>
@@ -20,7 +17,7 @@
             <li><a href="#">ABOUT</a></li>
           </div>
           <li style="float:left">
-            <img class="logo" href="#" src="img/logo.svg" />
+            <img class="logo" href="#" src="<%=require('./img/logo.svg')%>" />
           </li>
         </ul>
       </nav>
@@ -126,76 +123,5 @@
     </div>
 
     <section class="landing"></section>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script>
-      $("#signUpForm").submit(function(event) {
-        event.preventDefault();
-
-        var $inputs = $("#signUpForm :input");
-        var values = {};
-        $inputs.each(function() {
-          if (this.name) {
-            values[this.name] = $(this).val();
-          }
-        });
-
-        var requestBody = {
-          first_name: values.firstName,
-          last_name: values.lastName,
-          school: values.school,
-          grade: values.grade,
-          email: values.email,
-          shirt_size: values.shirtSize,
-          allergy: values.foodAllergies,
-          diet_restriction: values.dietaryPref,
-          experience: values.yearsExperience,
-          first_time: values.firstTime === "yes",
-          phone_number: values.phoneNumber
-        };
-
-        // Create Student
-        $.ajax({
-          type: "POST",
-          url: "http://localhost:9121/api/students",
-          data: requestBody,
-          success: function(data, status, request) {
-            console.log(data);
-
-            // Create Emergency Contact
-            var contact = {
-              name: values.contactName,
-              relation: values.contactRelation,
-              phone_number: values.contactNumber,
-              email: values.contactEmail,
-              student_id: data.id
-            };
-
-            $.ajax({
-              type: "POST",
-              url: "http://localhost:9121/api/emergencycontacts",
-              data: contact,
-              success: function(data, status, request) {
-                console.log(data);
-                // TODO: Student registered, display message
-              },
-              error: function(request, status, error) {
-                console.log(error);
-                // TODO: Error when creating emergency contact, display error
-              },
-              dataType: "json"
-            });
-          },
-          error: function(request, status, error) {
-            console.log(error);
-            // TODO: Error when creating student, display error
-          },
-          dataType: "json"
-        });
-
-        return false;
-      });
-    </script>
   </body>
 </html>

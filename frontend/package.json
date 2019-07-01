@@ -1,0 +1,29 @@
+{
+  "name": "hax-121-website",
+  "version": "0.0.1",
+  "description": "Website for the HAX 121 hackathon.",
+  "main": "src/app.js",
+  "repository": "https://github.com/roboticapples14/HAX121",
+  "author": "HAX 121 Team",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "critters-webpack-plugin": "^2.3.0",
+    "css-loader": "^3.0.0",
+    "file-loader": "^4.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.7.0",
+    "purgecss-webpack-plugin": "^1.5.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.1",
+    "webpack-dev-server": "^3.7.2",
+    "webpackbar": "^3.2.0"
+  }
+}

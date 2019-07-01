@@ -8,7 +8,7 @@ body {
   overflow-x: hidden;
 }
 
-body {
+div.background {
   color: #ffffff;
 }
 
@@ -19,7 +19,6 @@ p {
 
 h1 {
   font-family: 'Open Sans', sans-serif;
-  font-size: 100px;
 }
 .home {
 }
