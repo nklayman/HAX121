@@ -8,8 +8,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server",
-    "build": "webpack"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server",
+    "build": "cross-env NODE_ENV=production webpack"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
@@ -19,6 +19,7 @@
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
     "critters-webpack-plugin": "^2.3.0",
+    "cross-env": "^5.2.0",
     "css-loader": "^3.0.0",
     "file-loader": "^4.0.0",
     "html-webpack-plugin": "^3.2.0",

@@ -7,33 +7,39 @@ const WebpackBar = require("webpackbar");
 const PurgecssPlugin = require("purgecss-webpack-plugin");
 const Critters = require("critters-webpack-plugin");
 
+const env = process.env.NODE_ENV || "production";
 const paths = {
   src: path.join(__dirname, "src")
 };
+const plugins = [
+  new CleanWebpackPlugin(),
+  new WebpackBar(),
+  new HtmlWebpackPlugin({
+    template: "src/index.html"
+  }),
+  new MiniCssExtractPlugin({
+    filename: "[name].css"
+  })
+];
+
+if (env === "production") {
+  plugins.push(
+    new PurgecssPlugin({
+      paths: glob.sync(`${paths.src}/**/*`, { nodir: true })
+    })
+  );
+  plugins.push(new Critters());
+}
 
 module.exports = {
-  mode: process.env.NODE_ENV || "production",
+  mode: env,
   entry: {
     app: path.join(paths.src, "app.js")
   },
   devServer: {
     contentBase: "./dist"
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new WebpackBar(),
-    new HtmlWebpackPlugin({
-      title: "Development",
-      template: "src/index.html"
-    }),
-    new MiniCssExtractPlugin({
-      filename: "[name].css"
-    }),
-    new PurgecssPlugin({
-      paths: glob.sync(`${paths.src}/**/*`, { nodir: true })
-    }),
-    new Critters()
-  ],
+  plugins,
   module: {
     rules: [
       {
