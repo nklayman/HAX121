@@ -19,18 +19,6 @@ module.exports = {
   devServer: {
     contentBase: "./dist"
   },
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        styles: {
-          name: "styles",
-          test: /\.css$/,
-          chunks: "all",
-          enforce: true
-        }
-      }
-    }
-  },
   plugins: [
     new CleanWebpackPlugin(),
     new WebpackBar(),
