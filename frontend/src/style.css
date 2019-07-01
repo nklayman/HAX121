@@ -95,7 +95,7 @@ nav a:hover {
 }
 
 .background {
-  background-image: url('img/homeBkgrd.png');
+  background-image: url('img/homeBkgrd.jpg');
   background-position: center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -135,7 +135,7 @@ nav a:hover {
 }
 
 .background {
-  background-image: url('img/homeBkgrd.png');
+  background-image: url('img/homeBkgrd.jpg');
   background-position: center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
